@@ -1,0 +1,15 @@
+milad.local {
+transfer {
+ to *
+}
+
+errors stdout
+log stdout
+secondary {
+transfer from 192.168.100.117
+}
+}
+. {
+    forward . 8.8.8.8 1.1.1.1
+    log
+}
