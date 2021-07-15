@@ -1,0 +1,4 @@
+sm.local        IN  SOA sm.local. sm.local.  2015082541 3600 3600 1209600 3600
+api    IN  A    192.168.100.2  
+web    IN  A 192.168.100.100 
+       IN  A 192.168.100.150
