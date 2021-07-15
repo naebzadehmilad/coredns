@@ -1,5 +1,19 @@
 milad.local {
-file /etc/coredns/plugin/milad.local
+file /etc/coredns/plugin/milad.local 
+transfer {
+ to * 
+}
+
+errors stdout
+log stdout
+secondary {
+transfer from 192.168.100.118
+}
+
+}
+
+sm.local {
+file /etc/coredns/plugin/sm.local
 transfer {
  to *
 }
@@ -11,8 +25,8 @@ transfer from 192.168.100.118
 }
 
 }
+
 . {
     forward . 8.8.8.8 1.1.1.1
     log
 }
-
