@@ -1,3 +1,13 @@
-milad.local        IN  SOA milad.local. milad.local.  2015082541 3600 3600 1209600 3600
-@    IN  A    192.168.100.1
-
+$ORIGIN milad.local.
+@                      3600 SOA   milad.local. (
+                              milad.local.     ; address of responsible party
+                              01                 ; serial number
+                              3600                       ; refresh period
+                              600                        ; retry period
+                              604800                     ; expire time
+                              1800                     ) ; minimum ttl
+                      86400 NS    ns1.sm.local.
+@                     14400 A     192.168.100.117
+mail                  14400 A     192.168.100.117
+204.13.248.106 IN PTR mail
+www                   43200 CNAME mail
